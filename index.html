@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BikeZa — عالم الدراجات مع حمزة</title>
+  <!-- خطوط عربية من Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Tajawal&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- شريط التنقل العلوي الثابت -->
+  <header>
+    <nav aria-label="شريط التنقل الرئيسي">
+      <a href="#home" class="logo" aria-label="BikeZa - الصفحة الرئيسية">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M32 8c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24S45.255 8 32 8zm-4 32l-4-4 10-10-10-10 4-4 14 14c2 2 2 4 0 6l-14 14z" fill="#2e7d32"/>
+        </svg>
+        BikeZa
+      </a>
+      <ul>
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#bike-types">أنواع الدراجات</a></li>
+        <li><a href="#about-hamza">عن حمزة</a></li>
+        <li><a href="#contact">اتصل بنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- الصفحة الرئيسية -->
+    <section id="home">
+      <svg viewBox="0 0 64 64" class="logo-main" aria-hidden="true">
+        <path d="M32 8c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24S45.255 8 32 8zm-4 32l-4-4 10-10-10-10 4-4 14 14c2 2 2 4 0 6l-14 14z" fill="#fff"/>
+      </svg>
+      <h1>BikeZa — عالم الدراجات مع حمزة</h1>
+      <p>مرحبًا بك في عالم الدراجات! اكتشف النوع المناسب لك.</p>
+      <button id="start-exploring" aria-label="ابدأ الاستكشاف">ابدأ الاستكشاف</button>
+    </section>
+
+    <!-- قسم أنواع الدراجات -->
+    <section id="bike-types">
+      <h2>أنواع الدراجات</h2>
+      <div class="grid">
+        <div class="bike-card">
+          <img src="images/bike1.jpg" alt="دراجة مدينة حديثة" />
+          <div class="bike-card-content">
+            <h3>دراجات المدينة (City Bikes)</h3>
+            <p>مثالية للركوب اليومي، مريحة وسهلة. تستخدم للتنقل في المدن.</p>
+            <button class="read-more" data-type="city">اقرأ المزيد</button>
+          </div>
+        </div>
+        <div class="bike-card">
+          <img src="images/bike2.jpg" alt="دراجة جبال قوية" />
+          <div class="bike-card-content">
+            <h3>دراجات الجبال (Mountain Bikes)</h3>
+            <p>للمغامرات في الطبيعة. قوية، مع تعليقات، مناسبة للمناطق الوعرة.</p>
+            <button class="read-more" data-type="mountain">اقرأ المزيد</button>
+          </div>
+        </div>
+        <div class="bike-card">
+          <img src="images/bike3.jpg" alt="دراجة طرق سريعة" />
+          <div class="bike-card-content">
+            <h3>دراجات الطرق (Road Bikes)</h3>
+            <p>للرياضيين، سريعة وخفيفة. مثالية للركوب الطويل والمنافسات.</p>
+            <button class="read-more" data-type="road">اقرأ المزيد</button>
+          </div>
+        </div>
+        <div class="bike-card">
+          <img src="images/bike4.jpg" alt="دراجة كهربائية" />
+          <div class="bike-card-content">
+            <h3>دراجات كهربائية (E-Bikes)</h3>
+            <p>مساعدة كهربائية للركوب الأسهل. مثالية للمبتدئين أو التنقل الطويل.</p>
+            <button class="read-more" data-type="e-bike">اقرأ المزيد</button>
+          </div>
+        </div>
+        <div class="bike-card">
+          <img src="images/bike5.jpg" alt="دراجة أطفال" />
+          <div class="bike-card-content">
+            <h3>دراجات للأطفال (Kids Bikes)</h3>
+            <p>دراجات آمنة وملونة للأطفال. تساعد في تعلم التوازن والرياضة.</p>
+            <button class="read-more" data-type="kids">اقرأ المزيد</button>
+          </div>
+        </div>
+        <div class="bike-card">
+          <img src="images/bike6.jpg" alt="دراجة ثابتة" />
+          <div class="bike-card-content">
+            <h3>دراجات ثابتة (Fixed Gear)</h3>
+            <p>بسيطة وديناميكية، بدون ترس. مثالية للمدن أو التدريب.</p>
+            <button class="read-more" data-type="fixed">اقرأ المزيد</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم عن حمزة -->
+    <section id="about-hamza">
+      <img src="images/hamza.jpg" alt="صورة رمزية لحمزة" />
+      <div class="text">
+        <h2>عن حمزة</h2>
+        <p>أنا حمزة، شغوف بالدراجات منذ الصغر. أنشأت هذا الموقع لمساعدتك على اختيار الدراجة المثالية بناءً على تجربتي ومعرفتي.</p>
+        <p class="message">هدفنا: جعل عالم الدراجات بسيطًا وواضحًا للجميع!</p>
+      </div>
+    </section>
+
+    <!-- قسم اتصل بنا -->
+    <section id="contact">
+      <h2>اتصل بنا</h2>
+      <form id="contact-form">
+        <label for="name">الاسم</label>
+        <input type="text" id="name" name="name" required aria-label="اسمك الكامل" />
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" required aria-label="بريدك الإلكتروني" />
+        <label for="message">الرسالة</label>
+        <textarea id="message" name="message" rows="5" required aria-label="رسالتك"></textarea>
+        <button type="submit">إرسال</button>
+      </form>
+      <div class="social-links">
+        <a href="https://wa.me/xxxxxxxxxx" aria-label="واتساب" target="_blank">📱</a>
+        <a href="https://instagram.com/xxxxx" aria-label="إنستغرام" target="_blank">📷</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal للتفاصيل -->
+  <div id="modal" class="modal-overlay">
+    <div class="modal">
+      <button class="close-modal" aria-label="إغلاق">&times;</button>
+      <img id="modal-img" src="" alt="" />
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+  <!-- Modal للمساعدة في اختيار الدراجة -->
+  <div id="help-modal" class="modal-overlay">
+    <div class="modal">
+      <button class="close-modal" aria-label="إغلاق">&times;</button>
+      <h3>ساعدني أختار دراجتي!</h3>
+      <form id="help-form">
+        <label for="usage">استخدامك</label>
+        <select id="usage" name="usage">
+          <option value="">اختر...</option>
+          <option value="city">المدينة</option>
+          <option value="mountain">الجبال</option>
+          <option value="sport">رياضي</option>
+          <option value="kids">للطفل</option>
+        </select>
+        <label for="budget">الميزانية (ريال)</label>
+        <input type="number" id="budget" name="budget" min="0" step="100" />
+        <button type="submit">احصل على التوصية</button>
+      </form>
+      <div id="recommendation"></div>
+    </div>
+  </div>
+
+  <!-- زر عائم -->
+  <button id="floating-btn" aria-label="ساعدني أختار دراجتي">
+    🚴‍♂️ ساعدني أختار دراجتي!
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
