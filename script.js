@@ -208,3 +208,18 @@ window.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem('preferredLanguage') || 'ar';
   switchLanguage(savedLang);
 });
+
+// تحميل الفيديو فقط عندما يكون في منطقة العرض
+const video = document.querySelector('video[data-src]');
+if (video) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        video.src = video.getAttribute('data-src');
+        video.play();
+        observer.unobserve(video);
+      }
+    });
+  });
+  observer.observe(video);
+}
