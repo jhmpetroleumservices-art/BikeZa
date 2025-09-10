@@ -1,1 +1,126 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>فيديوهات مميزة — BikeZa</title>
+  <!-- خطوط عربية من Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Cairo', 'Tajawal', sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: #2e7d32;
+      padding: 15px 0;
+      text-align: center;
+    }
+    header a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 30px;
+    }
+    .video-item {
+      margin: 30px 0;
+      text-align: center;
+    }
+    .video-item h3 {
+      color: #2e7d32;
+      margin-bottom: 15px;
+    }
+    iframe {
+      width: 100%;
+      max-width: 640px;
+      height: 360px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .back-btn {
+      display: block;
+      width: 200px;
+      margin: 30px auto;
+      padding: 12px;
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .back-btn:hover {
+      background: #1b5e20;
+    }
+    @media (max-width: 768px) {
+      iframe {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- شريط التنقل -->
+  <header>
+    <a href="index.html">🚴‍♂️ BikeZa — عالم الدراجات مع حمزة</a>
+  </header>
+
+  <div class="container">
+    <h1>🎥 فيديوهات مميزة من عالم الدراجات في مصر 🇪🇬</h1>
+    <p style="text-align: center; font-size: 1.1rem; color: #555;">
+      هنا هتلاقي أجمل اللحظات — بطولات، رحلات، وتجارب حقيقية من شوارع وطرق مصر!
+    </p>
+
+    <!-- فيديو 1 -->
+    <div class="video-item">
+      <h3>🏆 بطولة الدراجات في الإسكندرية 2024</h3>
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- فيديو 2 -->
+    <div class="video-item">
+      <h3>🌅 رحلة دراجات على كورنيش النيل — القاهرة</h3>
+      <iframe src="https://www.youtube.com/embed/fJ9rUzIMcZQ" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- فيديو 3 -->
+    <div class="video-item">
+      <h3>🏜️ مغامرة دراجات في صحاري الغردقة</h3>
+      <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+      </iframe>
+    </div>
+
+    <a href="index.html" class="back-btn">← رجوع للصفحة الرئيسية</a>
+  </div>
+
+</body>
+</html>
