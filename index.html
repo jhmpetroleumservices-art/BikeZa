@@ -26,6 +26,7 @@
         </svg>
         BikeZa <img src="https://flagcdn.com/eg.svg" alt="علم مصر" width="30" style="margin-right: 10px;">
       </a>
+     <li><a href="videos.html">فيديوهات مميزة</a></li> 
       <ul>
   <li><a href="#home">الرئيسية</a></li>
   <li><a href="comparison.html">قارن بين الدراجات</a></li>
@@ -192,7 +193,24 @@
   </button>
 
   <script src="script.js"></script>
-</body><!-- أزرار المشاركة -->
+</body>
+  <script>
+  const video = document.querySelector('#home video');
+  const toggleBtn = document.getElementById('toggleVideo');
+
+  if (video && toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        toggleBtn.textContent = "⏸️ إيقاف الفيديو";
+      } else {
+        video.pause();
+        toggleBtn.textContent = "▶️ تشغيل الفيديو";
+      }
+    });
+  }
+</script>
+  <!-- أزرار المشاركة -->
 <div style="text-align: center; padding: 20px; background: #e3f2fd; direction: rtl;">
   <h3>عايز تقول لصحابك عن الموقع؟ 📲</h3>
   <a href="https://wa.me/?text=تعرف%20على%20موقع%20بيكزا%20-%20عالم%20الدراجات%20مع%20حمزة%20من%20مصر!%20https://jhmpetroleumservices-art.github.io/BikeZa/" 
@@ -211,6 +229,7 @@
        style="max-width: 100%; height: auto; border-radius: 8px; margin: 20px 0;">
   <p>من أسوان للإسكندرية — موقع بيكزا يساعد كل المصريين يختاروا دراجتهم المفضلة!</p>
 </section>
+
 
 
 
