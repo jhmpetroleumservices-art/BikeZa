@@ -141,14 +141,13 @@ const translations = {
 // دالة تغيير اللغة
 function switchLanguage(lang) {
   const t = translations[lang];
-
-  // تحديث النصوص في الصفحة
+  
+  // تحديث النصوص (كما كان)
   document.querySelector("h1").textContent = t.title;
   document.querySelector("#home p").textContent = t.welcome;
   document.querySelector("#start-exploring").textContent = t.explore;
   document.querySelector("#bike-types h2").textContent = t.types;
 
-  // تحديث أسماء وأنواع الدراجات
   const bikeCards = document.querySelectorAll(".bike-card");
   bikeCards[0].querySelector("h3").textContent = t.city;
   bikeCards[0].querySelector("p").textContent = t.desc_city;
@@ -168,35 +167,29 @@ function switchLanguage(lang) {
   bikeCards[5].querySelector("h3").textContent = t.fixed;
   bikeCards[5].querySelector("p").textContent = t.desc_fixed;
 
-  // تحديث قسم "عن حمزة"
   document.querySelector("#about-hamza h2").textContent = t.about;
   document.querySelector("#about-hamza .text p:first-of-type").textContent = t.about_text;
   document.querySelector("#about-hamza .message").textContent = t.mission;
 
-  // تحديث قسم "اتصل بنا"
   document.querySelector("#contact h2").textContent = t.contact;
   document.querySelector("label[for='name']").textContent = t.name;
   document.querySelector("label[for='email']").textContent = t.email;
   document.querySelector("label[for='message']").textContent = t.message;
   document.querySelector("#contact button[type='submit']").textContent = t.send;
 
-  // تحديث زر المساعدة العائم
   document.querySelector("#floating-btn").textContent = t.help;
 
-  // تحديث نموذج المساعدة
   document.querySelector("#help-form h3").textContent = t.help;
   document.querySelector("label[for='usage']").textContent = t.select_usage;
   document.querySelector("label[for='budget']").textContent = t.select_budget;
   document.querySelector("#help-form button[type='submit']").textContent = t.get_recommendation;
 
-  // تحديث قائمة التنقل
   const navLinks = document.querySelectorAll("nav ul li a");
   navLinks[0].textContent = t.nav_home;
   navLinks[1].textContent = t.nav_bikes;
   navLinks[2].textContent = t.nav_about;
   navLinks[3].textContent = t.nav_contact;
 
-  // تحديث اتجاه الصفحة (RTL/LTR)
   document.documentElement.setAttribute("lang", lang);
   if (lang === "ar") {
     document.documentElement.setAttribute("dir", "rtl");
@@ -204,11 +197,14 @@ function switchLanguage(lang) {
     document.documentElement.setAttribute("dir", "ltr");
   }
 
-  // تحديث العنوان في شريط المتصفح
   document.title = t.title;
+
+  // ✅ حفظ اللغة في المتصفح
+  localStorage.setItem('preferredLanguage', lang);
 }
 
-// تعيين اللغة الافتراضية عند التحميل
+// ✅ تحميل اللغة المحفوظة عند فتح الموقع
 window.addEventListener("DOMContentLoaded", () => {
-  switchLanguage("ar"); // العربية افتراضيًا
+  const savedLang = localStorage.getItem('preferredLanguage') || 'ar';
+  switchLanguage(savedLang);
 });
